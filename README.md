@@ -107,7 +107,7 @@ docker compose config --quiet
 docker compose up -d --build --wait
 ```
 
-打开 **http://127.0.0.1:8124/**，健康检查 **http://127.0.0.1:8124/actuator/health**。初始账号 `admin`，独立随机密码读取本机被 Git 忽略的 `.env` 中 `ADMIN_PASSWORD`。生成器以 0600 权限创建配置，不显示密码，也不覆盖已有文件。空库仅初始化总部、岗位、权限、菜单、三类布草字典及参数；不虚构客户或洗涤事实。已有数据库重启不重置账号或业务。
+打开 [http://127.0.0.1:8124/](http://127.0.0.1:8124/)，健康检查 [http://127.0.0.1:8124/actuator/health](http://127.0.0.1:8124/actuator/health)。初始账号 `admin`，独立随机密码读取本机被 Git 忽略的 `.env` 中 `ADMIN_PASSWORD`。生成器以 0600 权限创建配置，不显示密码，也不覆盖已有文件。空库仅初始化总部、岗位、权限、菜单、三类布草字典及参数；不虚构客户或洗涤事实。已有数据库重启不重置账号或业务。
 
 先建立部门、酒店、布草品类与客户约定价，再建立工厂岗位和绑定酒店账号。角色、菜单和部门直接通过后台页面维护。步骤见 [操作手册](docs/操作手册.md)。
 
@@ -121,7 +121,7 @@ docker compose up -d --build --wait
 
 MySQL 不向主机发布端口，容器按健康顺序启动；前端代理使用后端服务名。生产入口需由部署方配置 HTTPS、访问控制和备份。核心业务无需第三方密钥。
 
-不用容器开发：准备独立 MySQL 8.4 数据库 `zhuatech_linenflow` 和用户，设置上表数据库及管理员环境变量后在 `backend` 执行 `mvn spring-boot:run`；另在 `frontend` 执行 `npm ci` 和 `npm run dev`，访问 http://127.0.0.1:5173/，Vite 同源代理后端8080。
+不用容器开发：准备独立 MySQL 8.4 数据库 `zhuatech_linenflow` 和用户，设置上表数据库及管理员环境变量后在 `backend` 执行 `mvn spring-boot:run`；另在 `frontend` 执行 `npm ci` 和 `npm run dev`，访问 [http://127.0.0.1:5173/](http://127.0.0.1:5173/)，Vite 同源代理后端8080。
 
 ### 数据库与升级
 
